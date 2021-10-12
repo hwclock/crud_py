@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import db
 import json
 
 app = Flask(__name__)
@@ -25,3 +26,11 @@ def updateTask():
 @app.route('/api/task/delete', methods=['DELETE'])
 def deleteTask():
     return 'Delete task'
+
+datat = db.get_databse('crud_py')
+collection = datat['itens']
+
+@app.route('/db', methods=['GET'])
+def db():
+    dump(collection.find())
+    # print(jsonify(collection.find()))
