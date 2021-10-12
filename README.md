@@ -6,6 +6,7 @@
 * Instale as dependencias com o gerenciador de pacotes `pip` compativel com a sua versão do python
     * `pip install flask`
     * `pip install flask-cors`
+    * `pip isntall pymongo`
 
 * Defina as variveis de ambiente para rodar o flask
     * `export FLASK_APP=api/app.py`
